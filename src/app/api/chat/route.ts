@@ -12,7 +12,7 @@ export async function GET(request: Request) {
 
   const roomWithChats = await prisma.room.findUnique({
     where: {
-      id: Number(roomId),
+      id: String(roomId),
     },
     include: {
       chats: true,
@@ -63,7 +63,7 @@ export async function POST(request: Request) {
 
   const newChat = await prisma.chat.create({
     data: {
-      roomId: Number(roomId),
+      roomId: String(roomId),
       userId: String(res.userId),
       message: String(res.message),
     },
