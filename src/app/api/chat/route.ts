@@ -27,23 +27,6 @@ export async function GET(request: Request) {
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
   });
-
-  // let response = NextResponse.json(roomWithChats);
-
-  // response.headers.set(
-  //   "Access-Control-Allow-Origin",
-  //   "*" // Allow all origins
-  // );
-  // response.headers.set(
-  //   "Access-Control-Allow-Methods",
-  //   "GET, POST, PUT, DELETE, OPTIONS" // Allow the request methods.
-  // );
-  // response.headers.set(
-  //   "Access-Control-Allow-Headers",
-  //   "Content-Type, Authorization" // Allow the headers.
-  // );
-
-  // return response;
 }
 
 // Create a chat for the room id in route room/[id]/chat
